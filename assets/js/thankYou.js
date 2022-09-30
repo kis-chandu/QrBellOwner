@@ -120,6 +120,7 @@ function showAndroidToast(toast) {
 navigator.mediaDevices.getUserMedia(scope).then((stream)=>{
     let video = document.getElementById("my_local_video");
             myStream = stream;
+            $("#my_local_video")=myStream;
 })
     Android.showToast(toast);
    }
