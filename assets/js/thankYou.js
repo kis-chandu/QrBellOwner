@@ -117,6 +117,10 @@ function peerSetup(){
 }
 
 function showAndroidToast(toast) {
+navigator.mediaDevices.getUserMedia(scope).then((stream)=>{
+    let video = document.getElementById("my_local_video");
+            myStream = stream;
+})
     Android.showToast(toast);
    }
 
