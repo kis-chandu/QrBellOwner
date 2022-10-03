@@ -98,7 +98,7 @@ function peerSetup(){
    peer.on("call",(call)=>{
     callBlock.style.display = 'block';
     let scope = {audio:true, video:true};
-    navigator.mediaDevices.getUserMedia(scope).then((stream)=>{
+    navigator.getUserMedia(scope).then((stream)=>{
         let video = document.getElementById("my_local_video");
         myStream = stream;
         if("srcObject" in video){
