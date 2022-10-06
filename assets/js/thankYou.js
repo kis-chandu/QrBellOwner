@@ -1,5 +1,5 @@
 
-const qrBellHost = 'http://localhost:5000/qrbell/';
+const qrBellHost = 'http://192.168.1.4:5000/qrbell/';
 var name;
 var phone;
 var apiResponse;
