@@ -1,5 +1,5 @@
 
-const qrBellHost = 'http://localhost:8080/qrbell/';
+const qrBellHost = 'http://localhost:5000/qrbell/';
 var name;
 var phone;
 var apiResponse;
@@ -98,7 +98,7 @@ function peerSetup(){
    peer.on("call",(call)=>{
     callBlock.style.display = 'block';
     let scope = {audio:true, video:true};
-    navigator.getUserMedia(scope).then((stream)=>{
+    navigator.mediaDevices.getUserMedia(scope).then((stream)=>{
         let video = document.getElementById("my_local_video");
         myStream = stream;
         if("srcObject" in video){
